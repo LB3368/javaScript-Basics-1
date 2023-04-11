@@ -117,11 +117,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-const dailyAverage = 20; // replace with the actual value of the daily average
+//const dailyAverage = 20; // replace with the actual value of the daily average
 // loop runs as long as the value of acresLeft is greater than 0
 while (acresLeft > 0) {
   days++ //increments days by 1 on each iteration
-  acresLeft -= dailyAverage // subtracts the value of dailyAverage from acresLeft each iteration
+  acresLeft -= averageDailyAcres // subtracts the value of dailyAverage from acresLeft each iteration
 }
 
 console.log(days);
@@ -195,9 +195,20 @@ for (let i = 0; i < galaAcres.length; i++) {
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
+
+for (let i = 0; i < fujiAcres.length; i++) {
+    fujiPounds += fujiTons[i] * 2000
+    galaPounds += galaTons[i] * 2000
+    pinkPounds += pinkTons[i] * 2000
+}
+
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
+
 
 
 
@@ -222,11 +233,13 @@ for (let i = 0; i < galaAcres.length; i++) {
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
 
-
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
 
 
@@ -242,3 +255,7 @@ for (let i = 0; i < galaAcres.length; i++) {
 */
 
 // CODE HERE
+
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+
+console.log(totalProfit)
